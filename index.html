@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Pedidos</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="fas fa-utensils"></i> Simulador de Pedidos</h1>
+
+      <div id="mensajes"></div>
+
+      <form id="pedidoForm">
+        <label for="producto">Producto:</label>
+        <select id="producto" name="producto">
+          <!-- Las opciones se generarán dinámicamente con JavaScript -->
+        </select>
+
+        <label for="cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="cantidad"
+          name="cantidad"
+          min="1"
+          value="1"
+          oninput="actualizarPrecioTotal()"
+        />
+
+        <p>Precio total: $<span id="precioTotal">0</span></p>
+
+        <button type="button" onclick="agregarAlCarrito()">
+          <i class="fas fa-cart-plus"></i> Agregar al Carrito
+        </button>
+      </form>
+
+      <div id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="listaCarrito"></ul>
+
+        <button type="button" onclick="aplicarCuponPrompt()">
+          <i class="fas fa-tag"></i> Aplicar Cupón de Descuento
+        </button>
+
+        <div id="cuponForm" style="display: none">
+          <input
+            type="text"
+            id="codigoCupon"
+            placeholder="Ingrese código de 6 números"
+          />
+          <button onclick="aplicarCupon()">
+            <i class="fas fa-check"></i> Aplicar Cupón
+          </button>
+        </div>
+
+        <p>Total: $<span id="total">0</span></p>
+
+        <button type="button" onclick="realizarPedido()">
+          <i class="fas fa-shopping-bag"></i> Realizar Pedido
+        </button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

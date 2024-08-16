@@ -1,0 +1,179 @@
+:root {
+  --primary-color: #ff4757;
+  --secondary-color: #ffa502;
+  --background-color: #f7f1e3;
+  --text-color: #2f3542;
+  --border-radius: 12px;
+  --box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.8;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 700;
+}
+
+form,
+#carrito {
+  background-color: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ced6e0;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #ff6b81;
+  transform: translateY(-2px);
+}
+
+#carrito ul {
+  list-style: none;
+  padding: 0;
+}
+
+#carrito ul li {
+  background-color: #fff;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#carrito ul li.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#carrito ul li button {
+  background-color: #e74c3c;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+#carrito ul li button:hover {
+  background-color: #c0392b;
+}
+
+#mensajes {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  text-align: center;
+  display: none;
+}
+
+#cuponForm {
+  margin-top: 15px;
+}
+
+#cuponForm input {
+  width: calc(100% - 120px);
+  margin-right: 10px;
+}
+
+#cuponForm button {
+  width: 110px;
+}
+
+#precioTotal,
+#total {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 14px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s forwards;
+}
+
+.fadeOut {
+  animation: fadeOut 0.5s forwards;
+}
+
+#cantidad {
+  width: 100px;
+  display: inline-block;
+}
