@@ -26,10 +26,10 @@ El proyecto contiene los siguientes archivos en la raíz del repositorio:
 ## Cómo Ejecutar
 
 1. Clona este repositorio:
-   `git clone https://github.com/GimeSozzi/Entrega3_JavaScript_SozziGimena.git`
+   `git clone https://github.com/GimeSozzi/PreEntrega3_JavaScript_SozziGimena.git`
 
 2. Navega al directorio del proyecto:
-   `cd Entrega3_JavaScript_SozziGimena`
+   `cd PreEntrega3_JavaScript_SozziGimena`
 
 3. Abre el `index.html` en tu navegador:
    - `start index.html` (En Windows)
